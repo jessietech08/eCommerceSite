@@ -10,5 +10,20 @@ This repository was created to learn and practice skills to create a functional 
 - navigation bar at the top
 - chart of products along with prices
 
+## Getting Started
+Prerequisites:
+- Install the latest version of Visual Studio
+- Install NuGet Packages
+    - Microsoft.EntityFrameWorkCore
+    - Microsoft.EntityFrameWorkCore.Tools
+    - Microsoft.EntityFrameWorkCore.SqlServer
+    - Microsoft.AspNetCore.Diagnostics.EntityFrameWorkCore
+
 ### BootStrap Research 
-For styling I used *BootStrap*. Below are the links used for reference:
+For styling I used *BootStrap*. Here are the links used for reference:
+
+https://getbootstrap.com/docs/5.3/components/navbar/
+
+https://getbootstrap.com/docs/5.3/content/tables/
+
+https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment
