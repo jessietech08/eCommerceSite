@@ -2,10 +2,10 @@
 {
     public class GameCatalogViewModel
     {
-        public GameCatalogViewModel(List<Game> games, int LastPage, int currPage)
+        public GameCatalogViewModel(List<Game> games, int lastPage, int currPage)
         {
             Games = games;
-            LastPage = LastPage;
+            LastPage = lastPage;
             CurrentPage = currPage;
         }
 
