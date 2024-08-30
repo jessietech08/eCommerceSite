@@ -14,13 +14,19 @@ namespace eCommerceSite.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
+
+            const int NumGamesToDisplayPerPage = 3;
+            const int PageOffset = 1; // need a page offset to user current page and figure out num games to skip
+            
+            int currPage = id ?? 1; // set currPage to id if it has a value, otherwise use 1
+
             // Get all games from the DB
-            //List<Game> games = _context.Games.ToList();
             List<Game> games = await (from game in _context.Games
-                                select game).ToListAsync();
-            // Show them on the page 
+                                select game).Skip(NumGamesToDisplayPerPage * (currPage - PageOffset))
+                                .Take(NumGamesToDisplayPerPage)
+                                .ToListAsync();
 
             return View(games);
         }
